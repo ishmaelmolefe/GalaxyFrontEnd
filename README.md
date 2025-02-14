@@ -1,4 +1,5 @@
 # Express App with Authentication and Dashboard
+![image](https://github.com/user-attachments/assets/c3ca5910-18cb-4c60-a347-b161ccdd7906)
 
 This is a simple Express app that provides authentication and a dashboard for managing customers and rentals. The app authenticates users, sets a JWT cookie, and provides access to a dashboard with customer and rental insights.
 
