@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/images/login-icon.png" type="image/png">
+  <title>Login</title>
+  <link rel="stylesheet" href="/styles/login.css">
+</head>
+<body>
+  <div class="auth-container">
+    <div class="auth-card">
+      <h2 class="auth-title">Login</h2>
+      <% if (typeof error !== 'undefined') { %>
+        <div class="error-message"><%= error %></div>
+      <% } %>
+
+      <!-- Login form -->
+      <form class="auth-form" action="/" method="POST">
+        <input class="auth-input" type="email" name="email" placeholder="Email" required />
+        <input class="auth-input" type="password" name="password" placeholder="Password" required />
+        <button class="auth-button" type="submit">Log In</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

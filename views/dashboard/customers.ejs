@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Customer Dashboard</title>
+
+    <link rel="icon" href="/images/login-icon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/dashboard.css">
+</head>
+<body>
+    <div class="grid-container">
+
+        <!-- Header -->
+        <header class="header">
+            <div class="menu-icon" onclick="openSidebar()">
+                <span class="material-icons-outlined">menu</span>
+            </div>
+            <div class="header-right">
+                <span class="material-icons-outlined">account_circle</span>
+            </div>
+        </header>
+
+        <!-- Sidebar -->
+        <aside id="sidebar">
+            <div class="sidebar-title">
+                <div class="sidebar-brand">
+                    <span class="material-icons-outlined">assessment</span> Report
+                </div>
+                <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+            </div>
+            <ul class="sidebar-list">
+                <li class="sidebar-list-item">
+                    <a href="/dashboard">
+                        <span class="material-icons-outlined">dashboard</span> Rental Summary
+                    </a>
+                    <li class="sidebar-list-item">
+                        <a href="/customers">
+                            <span class="material-icons-outlined">person_search</span> Customer Activity
+                        </a>
+                    </li>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-container">
+            <div class="main-title">
+                <h2>DASHBOARD</h2>
+            </div>
+        
+            <div class="main-cards">
+                <div class="card">
+                    <div class="card-inner">
+                        <h3>TOTAL TRANSACTIONS</h3>
+                        <span class="material-icons-outlined">receipt_long</span> 
+                        <!-- Updated to "receipt_long" to represent transactions -->
+                    </div>
+                    <h1 id="totalTransactions">Loading...</h1>
+                </div>
+        
+                <div class="card">
+                    <div class="card-inner">
+                        <h3>TOTAL PROFIT</h3>
+                        <span class="material-icons-outlined">monetization_on</span> 
+                        <!-- Changed to "monetization_on" for profit representation -->
+                    </div>
+                    <h1 id="totalProfit">Loading...</h1>
+                </div>
+        
+                <div class="card">
+                    <div class="card-inner">
+                        <h3>CAPTURED TRANSACTIONS</h3>
+                        <span class="material-icons-outlined">playlist_add_check</span> 
+                        <!-- Changed to "playlist_add_check" to indicate verified/captured data -->
+                    </div>
+                    <h1 id="capturedTransactions">Loading...</h1>
+                </div>
+        
+                <div class="card">
+                    <div class="card-inner">
+                        <h3>NULL VALUES</h3>
+                        <span class="material-icons-outlined">warning</span> 
+                        <!-- Changed to "warning" to signify missing/null values -->
+                    </div>
+                    <h1 id="totalNullValues">Loading...</h1>
+                </div>
+            </div>
+        
+            <div class="charts">
+                <div class="charts-card">
+                    <h2 class="chart-title">Top 5 Categories Purchase</h2>
+                    <div id="bar-chart"></div>
+                </div>
+        
+                <div class="charts-card">
+                    <h2 class="chart-title">Top Spenders</h2>
+                    <div id="area-chart"></div>
+                </div>
+            </div>
+        </main>
+        
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.5/apexcharts.min.js"></script>
+    <script src="/js/customer.js"></script>
+</body>
+</html>
