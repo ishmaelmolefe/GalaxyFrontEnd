@@ -25,5 +25,5 @@ This is a simple Express app that provides authentication and a dashboard for ma
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/express-app.git
+   git clone https://github.com/ishmaelmolefe/GalaxyFrontEnd.git
    cd express-app
